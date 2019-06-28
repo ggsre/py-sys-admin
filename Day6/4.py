@@ -1,4 +1,7 @@
 #!/usr/bin/env python
+#
+# Finding Patterns in Texts
+#
 import re
 
 pattern = 'this'
