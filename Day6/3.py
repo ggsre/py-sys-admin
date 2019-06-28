@@ -1,5 +1,7 @@
 #!/usr/bin/env python
-
+#
+# Finding Patterns in Texts
+#
 import re
 patterns = [ 'this', 'that' ]
 text = 'Does this text match the pattern?'
