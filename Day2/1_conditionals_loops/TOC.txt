@@ -1,0 +1,27 @@
+Parsing command-line arguments
+- 01.py
+Conditionals and Comparisons
+- 02.py 
+- 03.py 
+- 04.py 
+Loops
+- for loop 
+- 05.py 
+- The range() function
+- 06.py 
+- while loop 
+- 07.py 
+Logical Operators
+- 08.py 
+Iterators
+- 09.py 
+Generators
+- 10.py 
+Functions
+- 11.py 
+- The return statement
+- 12.py 
+- Lambda functions
+- map & filter 
+- 13.py 
+- 14.py

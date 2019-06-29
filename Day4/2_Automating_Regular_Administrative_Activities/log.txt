@@ -1,0 +1,3 @@
+WARNING:py.warnings:./13.py:13: UserWarning: This warning is sent to the logs
+  warnings.warn('This warning is sent to the logs')
+

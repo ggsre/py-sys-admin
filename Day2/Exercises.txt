@@ -1,0 +1,173 @@
+1. We’ve seen that n = 42 is legal. What about 42 = n?
+
+2. How about x = y = 1? 
+
+3. In some languages every statement ends with a semi-colon, ;. What happens if you put a semi-colon at the end of a Python statement?
+
+4. What if you put a period at the end of a statement? 
+
+5. In math notation you can multiply x and y like this: xy. What happens if you try that in Python?
+
+6. If you are given three sticks, you may or may not be able to arrange them in a triangle. For example, if one of the sticks is 12 inches long and the other two are one inch long, you will not be able to get the short sticks to meet in the middle. For any three lengths, there is a simple test to see if it is possible to form a triangle:
+
+If any of the three lengths is greater than the sum of the other two, then you cannot form a triangle. Otherwise, you can. (If the sum of two lengths equals the third, they form what is called a “degenerate” triangle.)
+
+Write a function named is_triangle that takes three integers as arguments, and that prints either “Yes” or “No”, depending on whether you can or cannot form a triangle from sticks with the given lengths.
+
+Write a function that prompts the user to input three stick lengths, converts them to integers, and uses is_triangle to check whether sticks with the given lengths can form a triangle.
+
+7. What does the program print?
+
+def b(z):
+  prod = a(z, z)
+  print(z, prod)
+  return prod
+
+def a(x, y):
+  x = x + 1
+  return x * y
+
+def c(x, y, z):
+  total = x + y + z
+  square = b(total)**2
+  return square
+
+x = 1
+y = x + 1
+print(c(x, y+3, x+y))
+
+8. A palindrome is a word that is spelled the same backward and forward, like “noon” and “redivider”. Recursively, a word is a palindrome if the first and last letters are the same and the middle is a palindrome.
+
+The following are functions that take a string argument and return the first, last, and middle letters:
+
+def first(word):
+  return word[0]
+
+def last(word):
+  return word[-1]
+
+def middle(word):
+  return word[1:-1]
+
+
+Type these functions into a file named palindrome.py and test them out. What happens if you call middle with a string with two letters? One letter? What about the empty string, which is written '' and contains no letters?
+
+Write a function called is_palindrome that takes a string argument and returns True if it is a palindrome and False otherwise. Remember that you can use the built-in function len to check the length of a string.
+
+9. A number, a, is a power of b if it is divisible by b and a/b is a power of b. Write a function called is_power that takes parameters a and b and returns True if a is a power of b.
+
+10. Write a function named right_justify that takes a string named s as a parameter and prints the string with enough leading spaces so that the last letter of the string is in column 70 of the display.
+>>> right_justify('monty')
+												monty
+Hint: Use string concatenation and repetition. Also, Python provides a built-in function called len that returns the length of a string, so the value of len('monty') is 5.
+
+11. A function object is a value you can assign to a variable or pass as an argument. For example, do_twice is a function that takes a function object as an argument and calls it twice:
+
+def do_twice(f):
+  f()
+  f()
+
+Here’s an example that uses do_twice to call a function named print_spam twice.
+
+def print_spam():
+  print('spam')
+
+do_twice(print_spam)
+
+1 Type this example into a script and test it.
+2. Modify do_twice so that it takes two arguments, a function object and a value, and calls the function twice, passing the value as an argument.
+3. Copy the definition of print_twice from earlier in this chapter to your script.
+4. Use the modified version of do_twice to call print_twice twice, passing 'spam' as an argument.
+5. Define a new function called do_four that takes a function object and a value and calls the function four times, passing the value as a parameter. There should be only two statements in
+the body of this function, not four.
+
+12. The built-in function eval takes a string and evaluates it using the Python interpreter.
+For example:
+>>> eval('1 + 2 * 3')
+7
+>>> import math
+>>> eval('math.sqrt(5)')
+2.2360679774997898
+>>> eval('type(math.pi)')
+<class 'float'>
+
+Write a function called eval_loop that iteratively prompts the user, takes the resulting input and evaluates it using eval, and prints the result.
+It should continue until the user enters 'done', and then return the value of the last expression it evaluated.
+
+13. Read the documentation of the string methods. You might want to experiment with some of them to make sure you understand how they work. strip and replace are particularly useful.
+The documentation uses a syntax that might be confusing. For example, in find(sub[, start[, end]]), the brackets indicate optional arguments. So sub is required, but start is optional, and if you include start, then end is optional.
+
+14. There is a string method called count. Read the documentation of this method and write an invocation that counts the number of a’s in 'banana'.
+
+15. A string slice can take a third index that specifies the “step size”; that is, the number of spaces between successive characters. A step size of 2 means every other character; 3 means every third, etc.
+
+>>> fruit = 'banana'
+>>> fruit[0:5:2]
+'bnn'
+A step size of -1 goes through the word backwards, so the slice [::-1] generates a reversed string.
+Use this idiom to write a one-line version of is_palindrome from earlier exercise. 
+
+16. The following functions are all intended to check whether a string contains any lowercase letters, but at least some of them are wrong. For each function, describe what the function actually does (assuming that the parameter is a string).
+
+def any_lowercase1(s):
+  for c in s:
+  if c.islower():
+    return True
+  else:
+    return False
+
+def any_lowercase2(s):
+  for c in s:
+  if 'c'.islower():
+    return 'True'
+  else:
+    return 'False'
+
+def any_lowercase3(s):
+  for c in s:
+    flag = c.islower()
+  return flag
+
+def any_lowercase4(s):
+  flag = False
+  for c in s:
+    flag = flag or c.islower()
+  return flag
+
+def any_lowercase5(s):
+  for c in s:
+    if not c.islower():
+      return False
+    return True
+
+17. Write a function called nested_sum that takes a list of lists of integers and adds up the elements from all of the nested lists. For example:
+>>> t = [[1, 2], [3], [4, 5, 6]]
+>>> nested_sum(t)
+21
+
+18. Write a function called cumsum that takes a list of numbers and returns the cumulative sum; that is, a new list where the ith element is the sum of the first i + 1 elements from the original list. For example:
+>>> t = [1, 2, 3]
+>>> cumsum(t)
+[1, 3, 6]
+
+19. Write a function called middle that takes a list and returns a new list that contains all but the first and last elements. For example:
+>>> t = [1, 2, 3, 4]
+>>> middle(t)
+[2, 3]
+
+20. Write a function called is_sorted that takes a list as a parameter and returns True if the list is sorted in ascending order and False otherwise. For example:
+>>> is_sorted([1, 2, 2])
+True
+>>> is_sorted(['b', 'a'])
+False
+
+21. Write a function called has_duplicates that takes a list and returns True if there is any element that appears more than once. It should not modify the original list.
+
+22. Use a dictionary to write a faster, simpler version of has_duplicates. 
+
+23. Write a program that reads a word list from a file and prints all the sets of words that are anagrams.
+
+Hint: you might want to build a dictionary that maps from a collection of letters to a list of words that can be spelled with those letters. The question is, how can you represent the collection of letters in a way that can be used as a key?
+
+24. Modify the previous program so that it prints the longest list of anagrams first, followed by the second longest, and so on.
+

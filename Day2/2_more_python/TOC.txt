@@ -1,0 +1,25 @@
+Modules
+- sample.py 
+- add.py 
+Handling Errors
+- What are exceptions? 
+Exceptions
+- Types of Exceptions 
+Exception Handling
+- try_except block 
+- 01.py
+- 02.py
+- 03.py
+- finally keyword
+- 04.py
+- 05.py
+Raising exceptions
+- raise keyword 
+- 06.py 
+- 07.py 
+- 08.py 
+Using standard library
+- Commonly used modules:
+- time, sys, os, math, random, pickle, urllib, re, socket
+Working with environment variables
+- os.environ.get("HOSTNAME")
