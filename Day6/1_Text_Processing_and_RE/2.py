@@ -47,4 +47,4 @@ Flag            Description
 re.IGNORECASE   Case-insensitive matching
 re.DOTALL       Matches any character including new lines
 re.MULTILINE    Multiline matching
-Re.ASCII        Makes escape match only on ASCII characters
+re.ASCII        Makes escape match only on ASCII characters

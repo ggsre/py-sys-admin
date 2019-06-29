@@ -13,6 +13,3 @@ for pattern in patterns:
     print 'found a match!'
   else:
     print 'no match'
-bash-4.1$ python 3.py
-Looking for "this" in "Does this text match the pattern?" -> found a match!
-Looking for "that" in "Does this text match the pattern?" -> no match

@@ -1,13 +1,9 @@
 #!/usr/bin/env python
+# coding=utf-8
 #
 # Unicode
 #
 import re
-import codecs
-import sys
-
-# Set standard output encoding to UTF-8.
-sys.stdout = codecs.getwriter('UTF-8')(sys.stdout)
 
 text = u'FranÃ§s z.oty Ãterreich'
 pattern = ur'\w+'
